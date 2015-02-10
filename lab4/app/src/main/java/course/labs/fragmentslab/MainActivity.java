@@ -46,11 +46,6 @@ public class MainActivity extends Activity implements
 
 	}
 
-
-
-        //TODO - What else can be done when the screen is rotated?
-
-
 	// If there is no fragment_container ID, then the application is in
 	// two-pane mode
 
@@ -91,6 +86,7 @@ public class MainActivity extends Activity implements
 
 	}
 
+    //TODO - What else can be done when the screen is rotated?
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
     }
