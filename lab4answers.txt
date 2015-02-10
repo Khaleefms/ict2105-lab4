@@ -1,0 +1,15 @@
+At runtime, the system ensures the best possible display on the current screen and it uses certain logic to determing the "best matching" resources. For example, if the device has a large screen, layouts for an extra-large screen should go in layout-xlarge/ as predefined in the documentation. Also, for lab 4, based on the below code:
+
+// If there is no fragment_container ID, then the application is in
+// two-pane mode
+private boolean isInTwoPaneMode() {
+	return findViewById(R.id.fragment_container) == null;
+}
+
+If the emulator or device has a small screen, 
+findViewByID will look for the id, fragment_container, found in res/layout/main_activity.xml
+As the said id is declared in the main_activity.xml file, the return type would be false (because of == null).
+
+If the emulator or device has a large screen, 
+findViewByID will look for the id, fragment_container, found in res/layout-large/main_activity.xml
+As the said id is not declared in the main_activity.xml file, the return type would be true (because the id is not found in the main_activity.xml).
